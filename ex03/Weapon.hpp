@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombie.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrimonte <rrimonte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/12 15:08:50 by rrimonte          #+#    #+#             */
-/*   Updated: 2024/05/26 18:58:41 by rrimonte         ###   ########.fr       */
+/*   Created: 2024/06/02 12:23:34 by rrimonte          #+#    #+#             */
+/*   Updated: 2024/06/02 12:37:47 by rrimonte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 #include <iostream>
 
-class  Zombie {
+class  Weapon {
 public:
 	// Constructores
-	 Zombie(std::string	name); // Constructor por defecto
-	~ Zombie(); // Destructor
+	  Weapon(std::string type);
+	~ Weapon(); // Destructor
 
 	// Métodos
-	void announce( void );
+    const std::string& getType(void);
+	void setType(std::string type);
 	
 private:
 	//	Atributos
-	std::string	name;
+	std::string	type;
 };
-
-Zombie	*newZombie(std::string name);
-void randomChump( std::string name );
 
 #endif

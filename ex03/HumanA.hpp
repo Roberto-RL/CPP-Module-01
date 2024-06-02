@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrimonte <rrimonte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/12 15:08:50 by rrimonte          #+#    #+#             */
-/*   Updated: 2024/05/26 18:58:41 by rrimonte         ###   ########.fr       */
+/*   Created: 2024/06/02 12:23:24 by rrimonte          #+#    #+#             */
+/*   Updated: 2024/06/02 14:21:50 by rrimonte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
-#include <iostream>
+#ifndef HUMAN_A_HPP
+# define HUMAN_A_HPP
+#include "Weapon.hpp"
 
-class  Zombie {
+class  HumanA {
 public:
 	// Constructores
-	 Zombie(std::string	name); // Constructor por defecto
-	~ Zombie(); // Destructor
+	  HumanA(std::string name, Weapon &Weapon);
+	~ HumanA(); // Destructor
 
 	// Métodos
-	void announce( void );
+	void attack(void);
+    void get_weapon(Weapon Weapon);
 	
 private:
 	//	Atributos
 	std::string	name;
+    Weapon      &weapon;
 };
-
-Zombie	*newZombie(std::string name);
-void randomChump( std::string name );
 
 #endif

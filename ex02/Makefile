@@ -1,15 +1,12 @@
 
-NAME		=	ex00
-SRC			=	newZombie.cpp \
-				randomChump.cpp \
-				zombie.cpp \
-				main.cpp
+NAME		=	ex02
+SRC			=	main.cpp
 OBJS		=	$(SRC:.cpp=.o)
 COMPILE		=	c++
 # -std=c++98 displays an error if an unauthorized function is left in the code
 FLAGS		=	-Wall -Wextra -Werror -std=c++98
-EXE_NAME	=	-o ex00
-EXEC		=	ex00
+EXE_NAME	=	-o ex02
+EXEC		=	ex02
 
 # ------------------------------------- RULES ---------------------------------
 

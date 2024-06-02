@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrimonte <rrimonte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/12 15:08:50 by rrimonte          #+#    #+#             */
-/*   Updated: 2024/05/26 18:58:41 by rrimonte         ###   ########.fr       */
+/*   Created: 2024/06/02 12:23:20 by rrimonte          #+#    #+#             */
+/*   Updated: 2024/06/02 14:22:52 by rrimonte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
-#include <iostream>
+#include "HumanB.hpp"
 
-class  Zombie {
-public:
-	// Constructores
-	 Zombie(std::string	name); // Constructor por defecto
-	~ Zombie(); // Destructor
+HumanB::HumanB(std::string name)
+{
+    this->name = name;
+    std::cout << this->name << ": is created..." << std::endl;
+}
+HumanB::~HumanB(void)
+{
+}
 
-	// Métodos
-	void announce( void );
-	
-private:
-	//	Atributos
-	std::string	name;
-};
+void    HumanB::attack(void)
+{
+    std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
+}
 
-Zombie	*newZombie(std::string name);
-void randomChump( std::string name );
-
-#endif
+void HumanB::get_weapon(Weapon &weapon)
+{
+    this->weapon = &weapon;
+}

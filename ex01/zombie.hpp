@@ -6,7 +6,7 @@
 /*   By: rrimonte <rrimonte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 15:08:50 by rrimonte          #+#    #+#             */
-/*   Updated: 2024/05/26 18:58:41 by rrimonte         ###   ########.fr       */
+/*   Updated: 2024/06/02 11:46:44 by rrimonte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ class  Zombie {
 public:
 	// Constructores
 	 Zombie(std::string	name); // Constructor por defecto
+	  Zombie(void);
 	~ Zombie(); // Destructor
 
+	void set_name(std::string name);
 	// Métodos
 	void announce( void );
 	
@@ -28,7 +30,6 @@ private:
 	std::string	name;
 };
 
-Zombie	*newZombie(std::string name);
-void randomChump( std::string name );
+Zombie* zombieHorde( int N, std::string name );
 
 #endif

@@ -5,18 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrimonte <rrimonte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/12 15:06:47 by rrimonte          #+#    #+#             */
-/*   Updated: 2024/06/02 10:54:56 by rrimonte         ###   ########.fr       */
+/*   Created: 2024/06/02 12:23:27 by rrimonte          #+#    #+#             */
+/*   Updated: 2024/06/02 14:03:45 by rrimonte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "zombie.hpp"
-
-int main(void)
+int main()
 {
-	Zombie *nZombie = newZombie("Jhonny");
-	nZombie->announce();
-	randomChump("nooooooo");
-	delete nZombie;
-	return(0);
+    {
+      Weapon club = Weapon("crude spiked club");
+      HumanA bob("Bob", club);
+      bob.attack();
+      club.setType("some other type of club");
+      bob.attack();
+    }
+    {
+        Weapon club = Weapon("crude spiked club");
+        HumanB jim("Jim");
+        jim.setWeapon(club);
+        jim.attack();
+        club.setType("some other type of club");
+        jim.attack();
+    }
+    return 0;
 }
