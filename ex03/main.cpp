@@ -6,9 +6,13 @@
 /*   By: rrimonte <rrimonte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 12:23:27 by rrimonte          #+#    #+#             */
-/*   Updated: 2024/06/02 14:03:45 by rrimonte         ###   ########.fr       */
+/*   Updated: 2024/06/10 18:53:22 by rrimonte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main()
 {

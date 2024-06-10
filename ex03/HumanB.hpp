@@ -6,7 +6,7 @@
 /*   By: rrimonte <rrimonte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 12:23:24 by rrimonte          #+#    #+#             */
-/*   Updated: 2024/06/02 14:22:50 by rrimonte         ###   ########.fr       */
+/*   Updated: 2024/06/10 18:56:17 by rrimonte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
 
 	// Métodos
 	void attack(void);
-    void get_weapon(Weapon &weapon);
+    void setWeapon(Weapon &weapon);
 	
 private:
 	//	Atributos
